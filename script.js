@@ -1,8 +1,13 @@
 $(document).ready(function() {
-  alert('Welcome to jQuery.');
-  });
+  $('h1 + p').addClass('large_blue');
 
-$(document).ready(function() {
-  alert($('p').length + ' elements!');
+  $('#toggleButton').click(function() {
+    $('#disclaimer').toggle();
+    if ($('#disclaimer').is(':visible')) {
+      $(this).val('Hide');
+    } else {
+      $(this).val('Show'); 
+    }
+  });
 });
 
